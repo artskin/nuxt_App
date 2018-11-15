@@ -34,7 +34,8 @@ module.exports = {
   ** Plugins to load before mounting the App
   */
   plugins: [
-    '@/plugins/element-ui'
+    '@/plugins/element-ui',
+    { src: '@/plugins/vue-particles', ssr: false }
   ],
 
   /*
@@ -51,6 +52,14 @@ module.exports = {
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
   },
+
+  
+    overlay: {
+      warnings: false,
+      errors: false
+    },
+  
+  lintOnSave: false,
 
   /*
   ** Build configuration
