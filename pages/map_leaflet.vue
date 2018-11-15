@@ -5,18 +5,19 @@
       <h1 class="title">
         nuxt_App
       </h1>
-      <h2 class="subtitle">
-        My hunky-dory Nuxt.js project
-      </h2>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          class="button--green">Documentation</a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey">GitHub</a>
+      <div 
+        id="map-wrap" 
+        style="height: 400px;width:600px;"
+      >
+        <no-ssr>
+          <l-map
+            :zoom="13"
+            :center="[47.413220, -1.219482]"
+          >
+            <l-tile-layer url="http://{s}.tile.osm.org/{z}/{x}/{y}.png" />
+            <l-marker :lat-lng="[47.413220, -1.219482]"/>
+          </l-map>
+        </no-ssr>
       </div>
     </div>
   </section>
@@ -26,9 +27,7 @@
 import Logo from '~/components/Logo.vue'
 
 export default {
-  components: {
-    Logo
-  }
+  components: { Logo }
 }
 </script>
 
