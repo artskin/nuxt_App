@@ -7,7 +7,10 @@ module.exports = {
   ** Headers of the page
   */
   head: {
-    title: pkg.name,
+    //title: pkg.name,
+    website: '智人admin-UI',
+    title: '%s -智慧数据',
+    titleTemplate: '%s - 数据管理后台',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -54,12 +57,13 @@ module.exports = {
   },
 
   
+  devServer: {
     overlay: {
-      warnings: false,
-      errors: false
+        warnings: false,
+        errors: false
     },
-  
-  lintOnSave: false,
+    lintOnSave: false
+  },
 
   /*
   ** Build configuration

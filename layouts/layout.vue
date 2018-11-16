@@ -1,8 +1,9 @@
 <template>
   <el-container class="layout">
     <el-header>
-      <div class="layout-logo">
+      <div class="layout-title">
         <i class="iconfont icon-LogoWhalel"/>
+        <h1>{{ title }}</h1>
       </div>
       <el-menu 
         :default-active="activeIndex" 
@@ -78,7 +79,7 @@
       
     </el-container>
     <el-footer>
-      <p>© 2018 上海信息科技有限公司 沪ICP备13037734号</p>
+      <p>© 2018 上海阿沐科技有限公司 沪ICP备13037731号</p>
     </el-footer>
   </el-container>
 </template>
@@ -86,7 +87,7 @@
 export default {
   data() {
     return {
-      title: '用户中心',
+      title: '智人系统',
       activeIndex: '1',
       activeIndex2: '1'
     }
@@ -114,6 +115,7 @@ export default {
 body {
   padding: 0;
   margin: 0;
+  background-color: #15142b;
 }
 @font-face {
   font-family: 'iconfont'; /* project id 732420 */
@@ -140,17 +142,25 @@ body {
   /* max-width: 1000px;
     margin: 0 auto; */
 }
-.layout-logo {
-  width: 100px;
-  height: 30px;
+.layout-title {
+  width: 200px;
+  height: 40px;
+  line-height: 1;
   float: left;
   position: relative;
-  top: 15px;
-  left: 20px;
+  top: 10px;
+  left: 0px;
+  display: flex;
+  align-items: center;
 }
-.layout-logo .icon-LogoWhalel {
+.layout-title .icon-LogoWhalel {
   font-size: 40px;
-  color: darkgreen;
+  color: #eee;
+}
+.layout-title h1 {
+  padding-left: 10px;
+  color: #fff;
+  font-weight: normal;
 }
 .layout-nav {
   width: 420px;
@@ -160,17 +170,23 @@ body {
 .layout-footer-center {
   text-align: center;
 }
-.el-header {
-  /* background: #3e4f72; */
-  /* min-height: 100px; */
-}
+
 .el-menu {
   float: right;
 }
 .el-footer {
   font-size: 12px;
-  color: #666;
+  color: #ccc;
   text-align: center;
   border-top: 1px solid #ddd;
+}
+.el-header,
+.el-footer {
+  background: #3e4f72;
+  line-height: 60px;
+}
+.el-aside {
+  background-color: #0e0c28;
+  line-height: 200px;
 }
 </style>

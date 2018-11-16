@@ -1,7 +1,8 @@
 <template>
-  <section class="container login_bg">
+  <section class="container login login_bg">
+    <h1 class="login-title">智慧数据</h1>
     <div class="login-box">
-      <h1 class="title">智慧数据</h1>
+      
       <el-form 
         ref="form" 
         :model="form" 
@@ -68,6 +69,7 @@ export default {
 .container {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -118,16 +120,23 @@ export default {
   z-index: 1;
   width: 100%;
   height: 100%;
-  margin-top: -120px;
+}
+.login-title {
+  z-index: 1;
+  text-align: center;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 32px;
+  font-weight: normal;
 }
 .login-box {
-  width: 460px;
-  height: 320px;
+  width: 420px;
+  min-height: 230px;
   margin: 30px auto 0;
-  padding: 40px 80px 20px 40px;
+  padding: 40px 40px 30px 20px;
   background: rgba(0, 0, 51, 0.5);
   box-shadow: 0 0 60px rgba(0, 0, 0, 0.4);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   z-index: 1;
 }
@@ -139,11 +148,13 @@ export default {
   top: 0;
 }
 .login .el-form-item__label {
-  color: aliceblue;
+  color: rgba(255, 255, 255, 0.7);
 }
 .login .el-input__inner {
   background: rgba(255, 255, 255, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding-left: 10px;
 }
 .user-pic,
 .round {
@@ -253,5 +264,15 @@ export default {
 
 .links {
   padding-top: 5px;
+}
+.button--green {
+  border-radius: 100px;
+  padding: 10px 50px;
+  border: 1px solid rgb(255, 255, 255, 0.3);
+  color: #fff;
+  font-size: 14px;
+}
+.button--green:hover {
+  background: #321c6849;
 }
 </style>

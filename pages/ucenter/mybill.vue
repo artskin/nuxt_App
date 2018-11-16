@@ -122,6 +122,19 @@ export default {
         }
       ]
     }
+  },
+  head() {
+    return {
+      title: this.title + ' - 智人系统',
+      titleTemplate: this.title + ' - 智人系统',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'My custom description'
+        }
+      ]
+    }
   }
 }
 </script>
